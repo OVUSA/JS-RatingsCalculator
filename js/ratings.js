@@ -13,11 +13,11 @@ const collect_ratings = ()=>{
     elements.forEach(element=>{
         rating =parseInt(element.id.replace('star',''));
         ratings.count += parseInt(element.value);
-        rating.sum +=parseInt(element.value)*rating;
+        ratings.sum +=parseInt(element.value)*rating;
     })
 
-    if(rating.count!==0){
-        ratings.average = rating.sum/rating.count;
+    if(ratings.count!==0){
+        ratings.average = ratings.sum/ratings.count;
     }
 
     return ratings;
